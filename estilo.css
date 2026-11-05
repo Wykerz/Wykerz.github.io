@@ -1,0 +1,134 @@
+:root {
+  color-scheme: light dark;
+  --fondo: #F6F1E8;
+  --superficie: #FFFDF8;
+  --texto: #2B2620;
+  --suave: #6B6157;
+  --verde: #0F766E;
+  --linea: #E4DACB;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #1C1915;
+    --superficie: #27231E;
+    --texto: #F1EADF;
+    --suave: #B5AA9C;
+    --verde: #5CC5B8;
+    --linea: #3A342C;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: ui-rounded, -apple-system, BlinkMacSystemFont, "SF Pro Rounded", system-ui, "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 16px 24px;
+  padding-left: max(16px, env(safe-area-inset-left));
+  padding-right: max(16px, env(safe-area-inset-right));
+}
+
+a { color: var(--verde); text-underline-offset: 2px; }
+
+.miga { font-size: 15px; margin: 0 0 24px; }
+.miga a { text-decoration: none; }
+
+.cabecera {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.icono {
+  width: 72px;
+  height: 72px;
+  border-radius: 22.5%;
+  flex: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1.15;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 21px;
+  line-height: 1.25;
+  margin: 36px 0 12px;
+}
+
+h3 {
+  font-size: 17px;
+  margin: 0 0 6px;
+}
+
+p, ul { margin: 0 0 12px; }
+ul { padding-left: 22px; }
+li { margin-bottom: 6px; }
+
+.entrada {
+  font-size: 19px;
+  color: var(--suave);
+  margin-top: 12px;
+}
+
+.tarjeta {
+  background: var(--superficie);
+  border: 1px solid var(--linea);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.tarjeta p:last-child, .tarjeta ul:last-child { margin-bottom: 0; }
+
+.app {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--texto);
+}
+
+.app .icono { width: 56px; height: 56px; }
+.app strong { display: block; font-size: 19px; }
+.app span { color: var(--suave); font-size: 15px; }
+.app .ir { margin-left: auto; color: var(--verde); font-size: 22px; }
+
+.correo {
+  display: inline-block;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.fecha { color: var(--suave); font-size: 15px; }
+
+footer {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+  border-top: 1px solid var(--linea);
+  color: var(--suave);
+  font-size: 14px;
+}
+
+footer p { margin: 0 0 6px; }
